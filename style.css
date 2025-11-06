@@ -1,0 +1,666 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-image: url('./Imagens/Background-imagem.jfif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    transition: background-image 0.5s ease-in-out;
+}
+
+header .logo img {
+    width: 400px;
+    height: 200px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(20px);
+    width: 520px;
+    height: 60px;
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+    bottom: 120px;
+    box-shadow: 0 0 5px gray;
+}
+
+nav a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s ease;
+    display: flex;
+    border-radius: 40px;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.884);
+}
+
+.Header-Text h1 {
+    color: white;
+    font-size: 95px;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.regrow {
+    background-image: linear-gradient(to right, rgb(0, 177, 9), rgb(125, 255, 125));
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.Header-Text .what {
+    margin-left: 350px;
+}
+
+.Header-Text b {
+    background-image: linear-gradient(to right, rgb(148, 0, 0), rgb(255, 3, 3));
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.Header-Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.Header-Cards-Child {
+    width: 300px;
+    height: 140px;
+    background-color: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(40px);
+    border-radius: 22px;
+    padding: 15px;
+    display: flex;
+    transition: all 0.9s ease;
+}
+
+.Header-Cards-Child img {
+    width: 90px;
+    height: 90px;
+}
+
+.Header-Cards-Child-Text h3 {
+    font-size: 25px;
+}
+
+.Header-Cards-Child:hover {
+    transform: scale(1.01);
+}
+
+main {
+    background-color: #242424;
+    padding: 70px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.hr-main {
+    width: 130px;
+    height: 5px;
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(0, 255, 238), rgb(0, 190, 89));
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+main ul {
+    width: 75%;
+    height: 800px;
+    background-color: #474747;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+main ul li {
+    list-style: none;
+    margin-top: 20px;
+    background-color: #4c4c4c;
+    height: 160px;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    transition: all 0.7s ease;
+}
+
+main ul li:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 14px #242424;
+    color: white;
+}
+
+.Container-Cards {
+    width: 75%;
+    height: 650px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #474747;
+    padding: 25px;
+}
+
+.Container-Cards-text {
+    margin-top: 50px;
+}
+
+.Cards {
+    padding: 25px;
+    background-color: #4c4c4c;
+    height: 160px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.9s ease;
+    margin-top: 25px;
+}
+
+.Cards h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    transition: 0.7s ease;
+}
+
+.Cards:hover .Create {
+    background-image: linear-gradient(to right, rgb(0, 177, 9), rgb(125, 255, 125));
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.Cards:hover .Problem {
+    background-image: linear-gradient(to right, rgb(148, 0, 0), rgb(255, 3, 3));
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.Cards:hover .Solution {
+    background-image: linear-gradient(to right, rgb(0, 51, 255), rgb(3, 104, 255));
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.Cards p {
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.Cards:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px #242424;
+    color: white;
+}
+
+.Container-Cards-Supporters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 25px;
+    width: 75%;
+    margin: 50px auto;
+}
+
+.Cards-Supporters {
+    position: relative;
+    background-color: #4c4c4c;
+    height: 250px;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.Cards-Supporters img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.Cards-Supporters:hover {
+    transform: scale(1.01);
+}
+
+.Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.Cards-Supporters:hover .Overlay {
+    opacity: 1;
+}
+
+.Overlay h2 {
+    margin-bottom: 10px;
+}
+
+.Cards-Supporters button {
+    width: 220px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #242424;
+    color: white;
+    transition: 0.5s ease;
+    margin-left: 55px;
+    margin-top: 25px;
+}
+
+.Cards-Supporters button:hover {
+    color: black;
+    background-color: #fff;
+    transform: scale(1.02);
+}
+
+.Suppor-header {
+    font-size: 38px;
+    margin-top: 50px;
+}
+
+footer {
+    background-color: #242424;
+    padding: 15px;
+}
+
+.hr-footer {
+    width: 700px;
+    height: 5px;
+    border: none;
+    background-color: aliceblue;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav a {
+    font-size: 27px;
+    color: #fcfcfc;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.5s ease;
+}
+
+.footer-nav a:hover {
+    color: #a9a9a9;
+}
+
+.footer-header img {
+    width: 400px;
+    height: 180px;
+}
+
+footer h3 {
+    text-align: center;
+    color: white;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    header .logo img {
+        width: 300px;
+        height: 150px;
+    }
+
+    nav {
+        width: 450px;
+        height: 55px;
+        gap: 15px;
+        bottom: 100px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .Header-Text h1 {
+        font-size: 70px;
+    }
+
+    .Header-Text .what {
+        margin-left: 200px;
+    }
+
+    .Header-Cards {
+        gap: 40px;
+    }
+
+    main ul {
+        width: 85%;
+        height: auto;
+    }
+
+    .Container-Cards,
+    .Container-Cards-Supporters {
+        width: 85%;
+        height: auto;
+    }
+
+    .Create,
+    .Problem,
+    .Solution {
+        font-size: 24px;
+    }
+
+    .Cards p {
+        font-size: 14px;
+    }
+
+    .Cards-Supporters {
+        width: 300px;
+        height: 230px;
+        min-width: 350px;
+    }
+
+    .Cards-Supporters button {
+        margin-left: 40px;
+    }
+
+    .footer-header img {
+        width: 300px;
+        height: 140px;
+    }
+
+    .hr-footer {
+        width: 500px;
+    }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 90vh;
+    }
+
+    header .logo img {
+        width: 220px;
+        height: 110px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        width: 75%;
+        height: auto;
+        gap: 10px;
+        bottom: 80px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .Header-Text h1 {
+        font-size: 48px;
+        margin-top: 50px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .Header-Text .what {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .Header-Cards {
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 25px;
+    }
+
+    .Header-Cards-Child {
+        width: 80%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .Header-Cards-Child img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .Header-Cards-Child-Text h3 {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    main h2 {
+        font-size: 32px;
+    }
+
+    main ul {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    main ul li {
+        height: auto;
+        padding: 20px;
+    }
+
+    .Container-Cards {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Cards p {
+        margin-left: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Container-Cards-Supporters {
+        width: 90%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .Cards-Supporters {
+        width: 90%;
+        height: auto;
+    }
+
+    .Cards-Supporters button {
+        width: 180px;
+        height: 38px;
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+
+    .Suppor-header {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .Create,
+    .Problem,
+    .Solution {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 25px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-header img {
+        width: 230px;
+        height: 100px;
+    }
+
+    .footer-nav a {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .hr-footer {
+        width: 80%;
+    }
+
+    footer h3 {
+        font-size: 15px;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    header {
+        height: 85vh;
+        width: 100vw;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        top: 40px;
+        width: 80%;
+        gap: 6px;
+        bottom: 50px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    .Header-Text h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .Header-Cards-Child {
+        width: 50%;
+        height: 200px;
+        display: none;
+    }
+
+    .Header-Cards-Child img {
+        width: 50px;
+        height: 50px;
+    }
+
+    main h2 {
+        font-size: 26px;
+    }
+
+    .Container-Cards {
+        margin: 0 auto;
+    }
+
+    .Cards {
+        height: 340px;
+    }
+
+    .Cards h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Cards p {
+        font-size: 10px;
+    }
+
+    .Container-Cards-Supporters {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .Cards-Supporters {
+        width: 100%;
+        min-width: unset;
+        /* garante que o card possa encolher */
+        height: auto;
+    }
+
+    .Cards-Supporters img {
+        height: 130px;
+        /* imagem proporcional */
+    }
+
+    .Cards-Supporters button {
+        width: 140px;
+        height: 35px;
+        margin: 15px auto;
+    }
+
+    .footer-nav a {
+        font-size: 18px;
+    }
+
+    .footer-header img {
+        width: 200px;
+        height: 90px;
+    }
+}
